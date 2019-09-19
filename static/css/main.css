@@ -1,0 +1,42 @@
+ul {
+  list-style: none;
+}
+div.adjustment {
+  padding: 10px;
+  text-align: left;
+}
+
+/* Color filter
+→ we can easily understand whether img was selected or not. */
+div.colorfilter-base {
+  background-color: white; /* filter color. */
+  display: inline-block;
+}
+div.colorfilter-image {
+  display: block;
+}
+
+img.fig{
+  width: 12%; /* Initial condition */
+  height: auto;
+  margin: 3px;
+  border: 2px solid #021a40;
+}
+hr {
+  border-top: 4px dotted #83274e;
+  text-align: center;
+}
+
+/* Move gently. */
+#gallery {
+  overflow: hidden;
+}
+#gallery img {
+  transition: 0.5s;
+}
+#gallery img:hover {
+  -moz-transform: scale(1.1,1.1);
+  -webkit-transform: scale(1.1,1.1);
+  -o-transform: scale(1.1,1.1);
+  -ms-transform: scale(1.1,1.1);
+}
