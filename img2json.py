@@ -19,11 +19,11 @@ if __name__ == "__main__":
 
     img_dict = {}
     encod_dict = {}
-    for i,sub_dir in validOnly(enumerate(os.listdir(args.img_dir))):
+    for i,sub_dir in validOnly(enumerate(sorted(os.listdir(args.img_dir)))):
         encod_dict[i] = sub_dir
         img_dict[i] = []
         sub_dir_path = os.path.join(args.img_dir, sub_dir)
-        for fn in validOnly(os.listdir(sub_dir_path)):
+        for fn in validOnly(sorted(os.listdir(sub_dir_path))):
             img_path = os.path.join(args.from_html, sub_dir_path, fn)
             img_dict[i].append(img_path)
 
